@@ -8,12 +8,13 @@ function trueForm(event) {
     const password = form.elements.password.value;
   
     if (email === "" || password === "") {
-    alert("Please fill in all the fields!");
+        alert("Please fill in all the fields!");
+    } else {
+        const enteredForm = {
+            Email: email,
+            Password: password
+        };
+        form.reset();
+        console.log(enteredForm)
     }
-    const enteredForm = {
-    Email: email,
-    Password: password
-    }
-    form.reset();
-    console.log(enteredForm)
 }

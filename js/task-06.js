@@ -3,7 +3,7 @@ const inputText = document.querySelector('input')
 inputText.addEventListener('blur', validSymbols)
 
 function validSymbols(event) {
-    if (event.currentTarget.value.length ===
+    if (event.currentTarget.value.trim().length ===
         Number(inputText.dataset.length)) {
         inputText.classList.remove('invalid')
         inputText.classList.add('valid')
